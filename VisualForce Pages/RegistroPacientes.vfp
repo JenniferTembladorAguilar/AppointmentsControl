@@ -1,0 +1,12 @@
+<apex:page controller="RegistroPacientesController" sidebar="true" showHeader="true" docType="html-5.0">
+    <apex:form >
+        <apex:pageBlock title="Registro de Pacientes">
+            <apex:pageBlockSection ><apex:inputField required="true" value="{!paciente.Name}"/></apex:pageBlockSection>
+             <apex:pageBlockSection ><apex:inputField required="true" value="{!paciente.Apellido_Paterno__c}"/></apex:pageBlockSection>
+             <apex:pageBlockSection ><apex:inputField value="{!paciente.Apellido_Materno__c}"/></apex:pageBlockSection>
+             <apex:pageBlockSection ><apex:inputField required="true" type="email" value="{!paciente.Email__c}"/></apex:pageBlockSection>
+             <apex:pageBlockSection ><apex:inputField required="true" value="{!paciente.Genero__c}"/></apex:pageBlockSection>
+            <div align="center"><apex:pageBlockSection ><apex:commandButton action="{!save}" value="Guardar"/></apex:pageBlockSection></div>
+        </apex:pageBlock>
+    </apex:form> 
+</apex:page>

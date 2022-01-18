@@ -1,0 +1,16 @@
+<apex:page controller="RegistroCitasController" sidebar="true" showHeader="true" docType="html-5.0">
+    <apex:form >
+        <apex:pageBlock title="Registro de Citas">
+            <apex:pageBlockSection ><apex:inputField required="true" value="{!cita.Doctor__c}"/></apex:pageBlockSection>
+             <apex:pageBlockSection ><apex:inputField required="true" value="{!cita.Paciente__c}"/></apex:pageBlockSection>
+             <apex:pageBlockSection ><apex:inputField value="{!cita.Fecha_y_Hora__c}"/></apex:pageBlockSection>
+             <apex:pageBlockSection ><apex:inputField required="true" value="{!cita.Consultorio__c}"/></apex:pageBlockSection>
+             <apex:pageBlockSection ><apex:pageBlockSectionItem >
+             <apex:outputLabel value="Status" /><apex:selectList required="true" value="{!selectedStatus}" size="1"  ><apex:selectOptions value="{!statusOption}" />
+             </apex:selectList></apex:pageBlockSectionItem></apex:pageBlockSection>
+            <!-- <apex:pageBlockSection ><apex:inputField required="true" value="{!cita.Status__c}"/></apex:pageBlockSection>-->
+            <div align="center"><apex:pageBlockSection ><apex:commandButton action="{!save}" value="Guardar"/></apex:pageBlockSection></div>
+            	
+        </apex:pageBlock>
+    </apex:form> 
+</apex:page>

@@ -1,0 +1,15 @@
+	<apex:page controller="RegistroDoctoresController" sidebar="true" showHeader="true" docType="html-5.0">
+    <apex:form >
+        <apex:pageBlock title="Registro de Doctores">
+            <apex:pageBlockSection ><apex:inputField required="true" value="{!doctor.Name}"/></apex:pageBlockSection>
+             <apex:pageBlockSection ><apex:inputField required="true" value="{!doctor.Apellido_Paterno__c}"/></apex:pageBlockSection>
+             <apex:pageBlockSection ><apex:inputField value="{!doctor.Apellido_Materno__c}"/></apex:pageBlockSection>
+             <apex:pageBlockSection ><apex:inputField required="true" type="email" value="{!doctor.Email__c}"/></apex:pageBlockSection>
+             <apex:pageBlockSection ><apex:inputField required="true" value="{!doctor.Especialidad__c}"/></apex:pageBlockSection>
+             <apex:pageBlockSection ><apex:inputField value="{!doctor.Honorarios__c}"/></apex:pageBlockSection>
+            <apex:pageBlockSection ><apex:inputField required="true" value="{!doctor.Doctor__c}"/></apex:pageBlockSection>
+            <div align="center"><apex:pageBlockSection ><apex:commandButton action="{!save}" value="Guardar"/></apex:pageBlockSection></div>
+            
+        </apex:pageBlock>
+    </apex:form> 
+</apex:page>
